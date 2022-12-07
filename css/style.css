@@ -12,7 +12,7 @@
 /*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /* Scroll Bar */
 html::-webkit-scrollbar{
-    width: 0.7rem;
+    width: 0.5rem;
     background: transparent;
 }
 html::-webkit-scrollbar-thumb{
@@ -678,11 +678,27 @@ header{
         }
      }
      @media (max-width:325px){
+        .home{
+            min-height: 3555px;
+            padding-top: 4rem;
+        }
         .navbar{
             width: 100%;
         }
         .portfolio-box{
             height: 190px;
+        }
+        .about-data img{
+            width: 300px;
+            height: 300px;
+        }
+        .about-text p{
+            font-size: 0.45rem;
+            margin-bottom: 1rem;
+        }
+        .contact img{
+            width: 300px;
+            height: 300px;
         }
  
      }
