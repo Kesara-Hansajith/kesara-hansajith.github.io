@@ -679,7 +679,7 @@ header{
      }
      @media (max-width:325px){
         .home{
-            min-height: 3555px;
+            min-height: 355px;
             padding-top: 4rem;
         }
         .navbar{
@@ -689,16 +689,31 @@ header{
             height: 190px;
         }
         .about-data img{
-            width: 300px;
-            height: 300px;
+            width: 225px;
+            height: 225px;
         }
         .about-text p{
             font-size: 0.45rem;
             margin-bottom: 1rem;
         }
         .contact img{
-            width: 300px;
-            height: 300px;
+            width: 225px;
+            height: 225px;
+        }
+        .hero h1{
+            font-size: 2.5rem;
+            letter-spacing: -3px;
+            font-weight: 600;
+            line-height: 30px;
+        }
+        .hero h3{
+            line-height: 20px;
+        }
+        .heading{
+            font-size: 2rem;
+        }
+        .footer p{
+            font-size: 0.7rem;
         }
  
      }
