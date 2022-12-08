@@ -604,6 +604,9 @@ header{
     .services-content{
         grid-template-columns: repeat(2,1fr);
     }
+    .about-content{
+        grid-template-columns: 1fr;
+    }
     .portfolio-box{
         height: 245px;
     }
@@ -661,6 +664,10 @@ header{
         .heading{
             font-size: 3rem;
         }
+        .about-data img{
+            width: 400px;
+            height: 400px;
+        }
         .about-data h2{
             font-size: 1.5rem;
             line-height: 2.1rem;
@@ -670,6 +677,10 @@ header{
         .portfolio-content,
         .contact-content{
             grid-template-columns: 1fr;
+        }
+        .contact img{
+            width: 400px;
+            height: 400px;
         }
         .footer{
             flex-direction: column;
@@ -689,16 +700,16 @@ header{
             height: 190px;
         }
         .about-data img{
-            width: 225px;
-            height: 225px;
+            width: 280px;
+            height: 280px;
         }
         .about-text p{
             font-size: 0.45rem;
             margin-bottom: 1rem;
         }
         .contact img{
-            width: 225px;
-            height: 225px;
+            width: 280px;
+            height: 280px;
         }
         .hero h1{
             font-size: 2.5rem;
