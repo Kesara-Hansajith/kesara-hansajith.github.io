@@ -16,7 +16,7 @@
     <!-- Box Icones -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- Custom Favicon -->
-    <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon" /> 
+    <link href="images/icon.png" rel="shortcut icon" type="image/x-icon" /> 
 
 </head>
 <body>
@@ -285,8 +285,7 @@
         </div>
 
     </section>
-
-    <!-- Contact -->
+<!-- Contact -->
     <section class="contact container" id="contact">
         <!-- Heading -->
         <h2 class="heading">Contact Us</h2>
@@ -296,36 +295,34 @@
             
         </div>
         <!-- Contact-form -->
-        <div><form action="contact-us" name="contact-us" class="contact-form" id="contact-form">
-            <input type="text" placeholder="Your Name" class="name" required>
-            <input type="email" name="" id="" placeholder="Email Address" class="email" required>
-            <textarea name="messsage" id="" cols="30" rows="10" placeholder="Write message here..." class="message" required></textarea>
+        <div><form name="submit-to-google-sheet" action="contact-us" class="contact-form" id="contact-form">
+            <input type="text" name="name" placeholder="Your Name" class="name" required>
+            <input type="email" name="email" id="" placeholder="Email Address" class="email" required>
+            <textarea name="message" id="" cols="30" rows="10" placeholder="Write message here..." class="message" required></textarea>
             <input type="submit" value="Send" class="send-btn">
-        </form></div></div>
+        </form>
+        </div></div>
     </section>
 
-    <script>
+    <form name="submit-to-google-sheet">
+        <input name="email" type="email" placeholder="Email" required>
+        <button type="submit">Send</button>
+      </form>
+      
+      <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbwy-5PVzzQuU7s-hesrWCE-9SLYUGdNUQ2r7f91COkC8mr1eRixBw7COl9tadg1J2vN/exec'
-        const form = document.forms['contact-us']
-        const msg = document.getElementById('submitmsg')
+        const form = document.forms['submit-to-google-sheet']
       
         form.addEventListener('submit', e => {
-            msg.innerHTML = "Sending..."
           e.preventDefault()
           fetch(scriptURL, { method: 'POST', body: new FormData(form)})
             .then(response => {
-                msg.innerHTML = "Email sent successfully. Thank You!";
-                setTimeout(function(){
-                    msg.innerHTML = "";
-                },5000)
-                form.reset();
+                form.reset()
+                alert('Email sent successfully.')
             })
             .catch(error => {
-                msg.innerHTML = "Oh No...Something went wrong";
-                setTimeout(function(){
-                    msg.innerHTML = "";
-                },5000)
-                form.reset();
+                form.reset()
+                alert('Oh No...Something went wrong.')
             })
         })
       </script>
